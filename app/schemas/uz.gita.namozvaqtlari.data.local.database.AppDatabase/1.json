@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "0bc012c6a1b01f83b96ef2f26d73a0e2",
+    "entities": [
+      {
+        "tableName": "prayer_time",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `region` TEXT NOT NULL, `month` INTEGER NOT NULL, `day` INTEGER NOT NULL, `weekday` TEXT NOT NULL, `date` TEXT NOT NULL, `earlyMorning` TEXT NOT NULL, `sun` TEXT NOT NULL, `noon` TEXT NOT NULL, `century` TEXT NOT NULL, `evening` TEXT NOT NULL, `night` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "region",
+            "columnName": "region",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "month",
+            "columnName": "month",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "day",
+            "columnName": "day",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weekday",
+            "columnName": "weekday",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.earlyMorning",
+            "columnName": "earlyMorning",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.sun",
+            "columnName": "sun",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.noon",
+            "columnName": "noon",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.century",
+            "columnName": "century",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.evening",
+            "columnName": "evening",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "times.night",
+            "columnName": "night",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0bc012c6a1b01f83b96ef2f26d73a0e2')"
+    ]
+  }
+}
